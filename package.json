@@ -8,10 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:git": "ng build --prod --base-href https://vg1ne.github.io/angularCC/",
-    "deploy:git": "ngh",
-    "deploy": "npm run build:git && npm run deploy:git",
-    "openUrl": "start https://vg1ne.github.io/angularCC/"
+    "build:git": "ng build --prod --base-href https://vg1ne.github.io/angularCC/"
   },
   "private": true,
   "dependencies": {
