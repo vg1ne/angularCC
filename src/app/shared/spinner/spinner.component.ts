@@ -15,6 +15,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 })
 export class SpinnerComponent implements ControlValueAccessor {
   @Input() disabled = false;
+  @Input() minValue = null
   private innerValue;
 
   get value(){

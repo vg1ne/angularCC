@@ -17,6 +17,7 @@ export class SpaceAreaService {
   addAttendeesControl(count = validationRules.attendeesDefaultValue) {
     return this.fb.control(count,
       [
+        Validators.required,
         Validators.min(validationRules.attendeesMinValue)
       ]
     )

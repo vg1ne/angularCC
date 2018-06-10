@@ -3,7 +3,8 @@ import {FormGroup} from "@angular/forms";
 import {SpaceAreaService} from "./space-area.service";
 
 export const bookingDefaults = {
-  attendeesCount: 5
+  attendeesCount: 5,
+  attendeesCountMinValue: 1
 }
 
 export enum Display {
@@ -22,7 +23,7 @@ export class SpaceAreaComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() displayType = Display.OneLine
   spaceFormGroup: FormGroup;
-
+  attendeesCountMinValue = bookingDefaults.attendeesCountMinValue
   constructor(private spaceAreaService: SpaceAreaService) {
   }
 

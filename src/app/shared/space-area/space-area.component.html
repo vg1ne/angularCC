@@ -15,6 +15,7 @@
     <div fxFlex="{{attendeesFlex}}">
       <label>Counter:</label>
       <app-spinner
+        [minValue]="attendeesCountMinValue"
         formControlName="count"
       ></app-spinner>
       <div *ngIf="showAttendeesErrorsUnder">
