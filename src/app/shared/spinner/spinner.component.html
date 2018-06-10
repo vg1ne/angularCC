@@ -1,6 +1,8 @@
-value: {{value}}
-<input type="number"
-       [(ngModel)]="value"
-       (ngModelChange)="onModelChange(value)"
-       [disabled]="disabled"
->
+<mat-form-field>
+  <input type="number"
+         matInput
+         [(ngModel)]="value"
+         (ngModelChange)="onModelChange(value)"
+         [disabled]="disabled"
+  >
+</mat-form-field>
