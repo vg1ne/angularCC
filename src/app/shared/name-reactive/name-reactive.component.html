@@ -2,7 +2,7 @@
   <input type="text"
          matInput
          [(ngModel)]="value"
-         (blur)="onTouched($event);blur()"
+         (blur)="onTouched();blur()"
          (ngModelChange)="onModelChange(value)"
          [disabled]="disabled"
   >
