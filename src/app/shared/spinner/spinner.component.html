@@ -1,8 +1,9 @@
 <mat-form-field>
-  <input type="number"
-         matInput
-         [(ngModel)]="value"
-         (ngModelChange)="onModelChange(value)"
-         [disabled]="disabled"
-  >
+    <input type="number"
+           matInput
+           [(ngModel)]="value"
+           (blur)="onTouched($event)"
+           (ngModelChange)="onModelChange(value)"
+           [disabled]="disabled"
+    >
 </mat-form-field>

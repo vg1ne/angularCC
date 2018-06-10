@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-main-page',
@@ -11,7 +11,10 @@ export class MainPageComponent implements OnInit {
   counterGroup: FormGroup;
   constructor(private fb: FormBuilder) {
     this.counterGroup = this.fb.group({
-      count: [3]
+      count: [3, [
+        Validators.min(1),
+        Validators.max(3)
+      ]]
     })
   }
 

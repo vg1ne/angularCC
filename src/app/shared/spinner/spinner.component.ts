@@ -42,5 +42,6 @@ export class SpinnerComponent implements ControlValueAccessor {
   onModelChange(value) {
     this.value = value;
     this.onChange(value);
+    this.onTouched()
   }
 }
