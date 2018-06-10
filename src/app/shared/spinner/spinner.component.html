@@ -1,7 +1,7 @@
 <mat-form-field appearance="outline">
     <input type="number"
            matInput
-           min="{{minValue}}"
+           [attr.min]="minValue"
            [(ngModel)]="value"
            (blur)="onTouched($event)"
            (ngModelChange)="onModelChange(value)"

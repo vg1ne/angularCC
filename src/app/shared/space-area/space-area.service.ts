@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
+import {isIntegerNumber} from '../validators/is-integer-number.validator';
+import {isPositiveNumber} from "../validators/is-positive-number.validator";
 
 export const validationRules = {
   maxLength: 20,
@@ -18,7 +20,9 @@ export class SpaceAreaService {
     return this.fb.control(count,
       [
         Validators.required,
-        Validators.min(validationRules.attendeesMinValue)
+        Validators.min(validationRules.attendeesMinValue),
+        isIntegerNumber,
+        isPositiveNumber
       ]
     )
   }
