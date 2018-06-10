@@ -6,6 +6,7 @@ import {RouterModule} from "@angular/router";
 import { AppRoutingModule } from './/app-routing.module';
 import {MainModule} from "./main/main.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,6 +14,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserModule,
     RouterModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     AppRoutingModule,
     MainModule,
   ],

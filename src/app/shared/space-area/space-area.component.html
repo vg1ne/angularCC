@@ -1,17 +1,33 @@
-<section *ngIf="spaceFormGroup">
-  <div [formGroup]="spaceFormGroup">
-    <div>
-      {{spaceFormGroup.get('count').value}}
+<section *ngIf="spaceFormGroup" [formGroup]="spaceFormGroup">
+  <div  fxLayout="{{fxFlexLayout}}" fxLayoutGap="10px">
+
+    <div fxFlex="80">
+      <label>Name:</label>
+      <app-name-reactive
+        [defaultValue]="name"
+        formControlName="name"
+      ></app-name-reactive>
+      <div *ngIf="showNameErrorsUnder">
+        <span>Space name error</span>
+      </div>
+    </div>
+
+    <div fxFlex="{{attendeesFlex}}">
       <label>Counter:</label>
       <app-spinner
         formControlName="count"
       ></app-spinner>
+      <div *ngIf="showAttendeesErrorsUnder">
+        <span>Attendees are required</span>
+      </div>
     </div>
 
-    <label>Name:</label>
-    <app-name-reactive
-      [defaultValue]="name"
-      formControlName="inputName"
-    ></app-name-reactive>
+  </div>
+
+  <div class="errors-block" *ngIf="showAllErrorsUnder">
+    <div *ngIf="hasNameError">Space name error</div>
+    <div *ngIf="hasAttendeesError">Attendees are required</div>
   </div>
 </section>
+
+

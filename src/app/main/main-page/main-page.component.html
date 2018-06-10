@@ -1,9 +1,23 @@
 <form>
+  {{displayType}}
+  <section>
+    <label for="displayInline">
+      inline
+      <input type="radio" id="displayInline" name="displayInline" value="OneLine" [(ngModel)]="displayType"/>
+    </label>
+    <label for="displayColumn">
+      column
+      <input type="radio" id="displayColumn" name="displayColumn" value="Columns" [(ngModel)]="displayType">
+    </label>
+  </section>
+
   <section [formGroup]="formGroup">
-    <h2>{{formGroup.valid}}</h2>
+    <h2>{{formGroup.errors | json}}</h2>
+
     <app-space-area
       [form]="formGroup"
       [count]="count"
+      [displayType]="displayType"
       [name]="name">
     </app-space-area>
   </section>

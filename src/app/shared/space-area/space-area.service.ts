@@ -34,7 +34,7 @@ export class SpaceAreaService {
   initGroup(count?: number, name?:string) {
     return this.fb.group({
       count: this.addAttendeesControl(count),
-      inputName: this.addNameControl(name)
+      name: this.addNameControl(name)
     })
   }
 }

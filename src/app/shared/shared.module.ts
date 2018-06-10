@@ -5,6 +5,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material";
 import { NameReactiveComponent } from './name-reactive/name-reactive.component';
 import { SpaceAreaComponent } from './space-area/space-area.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { SpaceAreaComponent } from './space-area/space-area.component';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    FlexLayoutModule,
   ],
   declarations: [
     SpinnerComponent,
