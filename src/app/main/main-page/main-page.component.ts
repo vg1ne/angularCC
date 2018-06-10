@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-main-page',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
   count = 5
-  constructor() { }
+  counterGroup: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.counterGroup = this.fb.group({
+      count: [3]
+    })
+  }
 
   ngOnInit() {
   }

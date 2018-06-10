@@ -2,9 +2,21 @@
   main-page works!
 </p>
 <form>
-  count: {{count}}
-  <app-spinner
-    name="count"
-    [(ngModel)]="count"
-  ></app-spinner>
+
+ <section>
+   <h3>ngModel</h3>
+   count: {{count}}
+   <app-spinner
+     name="count"
+     [(ngModel)]="count"
+   ></app-spinner>
+ </section>
+
+  <section [formGroup]="counterGroup">
+    <h3>formControl</h3>
+    count: {{counterGroup.get('count').value}}
+    <app-spinner
+      formControlName="count"
+    ></app-spinner>
+  </section>
 </form>
