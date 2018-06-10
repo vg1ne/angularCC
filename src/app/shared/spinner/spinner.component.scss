@@ -1,6 +1,9 @@
 :host{
   display: flex;
   &.ng-touched.ng-invalid /deep/ {
+    .mat-form-field-appearance-outline .mat-form-field-outline{
+      color: red;
+    }
     .mat-form-field-appearance-legacy .mat-form-field-underline {
       background-color: red;
     }

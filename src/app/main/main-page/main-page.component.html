@@ -12,7 +12,7 @@
   </section>
 
   <section [formGroup]="formGroup">
-    <h2>{{formGroup.errors | json}}</h2>
+    <h2>{{formGroup.valid}}</h2>
 
     <app-space-area
       [form]="formGroup"
