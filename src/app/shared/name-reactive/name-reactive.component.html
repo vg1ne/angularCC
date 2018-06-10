@@ -1,0 +1,9 @@
+<mat-form-field>
+  <input type="text"
+         matInput
+         [(ngModel)]="value"
+         (blur)="onTouched($event);blur()"
+         (ngModelChange)="onModelChange(value)"
+         [disabled]="disabled"
+  >
+</mat-form-field>

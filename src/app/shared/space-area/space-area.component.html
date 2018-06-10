@@ -1,0 +1,17 @@
+<section *ngIf="spaceFormGroup">
+  <div [formGroup]="spaceFormGroup">
+    <div>
+      {{spaceFormGroup.get('count').value}}
+      <label>Counter:</label>
+      <app-spinner
+        formControlName="count"
+      ></app-spinner>
+    </div>
+
+    <label>Name:</label>
+    <app-name-reactive
+      [defaultValue]="name"
+      formControlName="inputName"
+    ></app-name-reactive>
+  </div>
+</section>

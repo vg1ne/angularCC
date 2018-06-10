@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-main-page',
@@ -7,18 +7,14 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-  count = 5
-  counterGroup: FormGroup;
+  count = 3
+  name = 'bla'
+  formGroup: FormGroup;
+
   constructor(private fb: FormBuilder) {
-    this.counterGroup = this.fb.group({
-      count: [3, [
-        Validators.min(1),
-        Validators.max(3)
-      ]]
-    })
+    this.formGroup = this.fb.group({})
   }
 
   ngOnInit() {
   }
-
 }
